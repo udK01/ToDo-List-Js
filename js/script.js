@@ -3,15 +3,30 @@ const taskInput = document.getElementById(`taskInput`);
 
 function addTask() {
   if (taskInput.value !== ``) {
+    // Task Item.
     const taskItem = document.createElement(`li`);
-    const taskText = document.createTextNode(taskInput.value);
-    taskItem.appendChild(taskText);
-    taskItem.onclick = function () {
-      this.classList.toggle("completed");
+    taskItem.textContent = taskInput.value;
+
+    // Delete Button.
+    const deleteButton = document.createElement(`button`);
+    deleteButton.textContent = `Delete`;
+    deleteButton.className = `deleteButton`;
+
+    // Remove Container On Delete.
+    deleteButton.onclick = () => {
+      taskItem.remove();
     };
+
+    // Add Task And Delete Button To Container.
+    taskItem.appendChild(deleteButton);
+    taskList.appendChild(taskItem);
+
+    // Complete Task.
+    taskItem.onclick = () => {
+      taskItem.classList.toggle("completed");
+    };
+
     taskList.appendChild(taskItem);
     taskInput.value = "";
   }
 }
-
-function taskCompleted() {}
