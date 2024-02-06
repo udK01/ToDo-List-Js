@@ -47,3 +47,21 @@ li {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.editButton {
+    background-color: #6F2DA8; /* Purple color for the edit button */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.saveButton {
+    background-color: #4169E1; /* Purple color for the edit button */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
